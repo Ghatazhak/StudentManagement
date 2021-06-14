@@ -1,47 +1,47 @@
 #include<string>
 using std::string;
 
-#include "degree.h"
+//#include "degree.h"
+#include "student.h"
 
-
-class Student {
-private:
-	string studentID = "blank";
-	string firstName = "blank";
-	string lastName = "blank";
-	string emailAddress = "blank";
-	int age = 0;
-	int numberOfDaysToCompleteCourse[3]{0,0,0};
-	DegreeProgram degreeProgram = NOPROGRAM;
-public:
 	// Get
-	string getStudentID(){return studentID;}
-	string getFirstName(){return firstName;}
-	string getLastName(){return lastName;}
-	string getEmailAddress(){return emailAddress;}
-	int getAge() {return age;}
-	int * getNumberOfDaysToCompleteCourse() {
-		return numberOfDaysToCompleteCourse;
+	string Student::getStudentID() { return studentID; }
+	string Student::getFirstName() { return firstName; }
+	string Student::getLastName() { return lastName; }
+	string Student::getEmailAddress() { return emailAddress; }
+	int Student::getAge() { return age; }
+	int * Student::getNumberOfDaysToCompleteCourse() {
+		return * numberOfDaysToCompleteCourse;
+	}
+	DegreeProgram getDegreeProgram() {
+		// definition in header file because out of scope for some reason   
 	}
 	// Set
-	void setStudentID(string newStudentID) {
+	void Student::setStudentID(string newStudentID) {
 		studentID = newStudentID;
 		return;
 	}
-	void setFirstName(string newStudentFirstName) {
+	void Student::setFirstName(string newStudentFirstName) {
 		firstName = newStudentFirstName;
 		return;
 	}
-	void setLastName(string newLastName) {
+	void Student::setLastName(string newLastName) {
 		lastName = newLastName;
 		return;
 	}
-	void setEmailAddress(string newEmailAddress) {
+	void Student::setEmailAddress(string newEmailAddress) {
 		emailAddress = newEmailAddress;
 		return;
 	} 
-	void setAge(int newAge) {
+	void Student::setAge(int newAge) {
 		age = newAge;
 		return;
 	}
-};
+	void Student::setNumberOfDaysToCompleteCourse(int newNumberOfDaysToCompleteCourse[3]) {
+		 * numberOfDaysToCompleteCourse = newNumberOfDaysToCompleteCourse;
+		return;
+	}
+	void Student::setDegreeProgram(DegreeProgram newDegreeProgram) {
+		degreeProgram = newDegreeProgram;
+	}
+
