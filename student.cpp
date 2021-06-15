@@ -13,9 +13,9 @@ using std::string;
 	int * Student::getNumberOfDaysToCompleteCourse() {
 		return * numberOfDaysToCompleteCourse;
 	}
-	DegreeProgram getDegreeProgram() {
+	//DegreeProgram getDegreeProgram() {
 		// definition in header file because out of scope for some reason
-	}
+	//}
 	// Set
 	void Student::setStudentID(string newStudentID) {
 		studentID = newStudentID;
@@ -37,8 +37,8 @@ using std::string;
 		age = newAge;
 		return;
 	}
-	void Student::setNumberOfDaysToCompleteCourse(int newNumberOfDaysToCompleteCourse[3]) {
-		 * numberOfDaysToCompleteCourse = newNumberOfDaysToCompleteCourse;
+	void Student::setNumberOfDaysToCompleteCourse(int *newNumberOfDaysToCompleteCourse[3]) {
+		 *numberOfDaysToCompleteCourse = *newNumberOfDaysToCompleteCourse;
 		return;
 	}
 	void Student::setDegreeProgram(DegreeProgram newDegreeProgram) {
