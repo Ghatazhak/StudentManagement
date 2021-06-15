@@ -1,8 +1,15 @@
 #pragma once
+// Includes
+#include<iostream>
+using std::cout;
+using std::endl;
+
 #include<string>
 using std::string;
+
 #include "degree.h"
 
+// Student Class
 class Student {
 private:
 	string studentID = "blank";
@@ -10,9 +17,18 @@ private:
 	string lastName = "blank";
 	string emailAddress = "blank";
 	int age = 0;
-	int* numberOfDaysToCompleteCourse[3]{ 0,0,0 };
+	int *numberOfDaysToCompleteCourse[3];
 	DegreeProgram degreeProgram;
 public:
+	//Constructor
+	Student(string initialStudentID, string initialFirstName, string initialLastName, string initialEmailAddress, int initialAge, int *initialNumberOfDaysToCompleteCourse[3], DegreeProgram initialDegreeProgram) {
+		studentID = initialStudentID;
+		firstName = initialFirstName;
+		lastName = initialLastName;
+		emailAddress = initialEmailAddress;
+		age = initialAge;
+		*numberOfDaysToCompleteCourse = *initialNumberOfDaysToCompleteCourse;
+	}
 	// Get
 	string getStudentID();
 	string getFirstName();
@@ -28,7 +44,12 @@ public:
 	void setLastName(string newLastName);
 	void setEmailAddress(string newEmailAddress);
 	void setAge(int newAge);
-	void setNumberOfDaysToCompleteCourse(int newNumberOfDaysToCompleteCourse[3]);
+	void setNumberOfDaysToCompleteCourse(int *newNumberOfDaysToCompleteCourse[3]);
 	void setDegreeProgram(DegreeProgram newDegreeProgram);
 	
+	// Print Member Function
+	void print() {
+		cout << studentID << endl;
+		return;
+	}
 };

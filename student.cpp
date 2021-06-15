@@ -1,7 +1,7 @@
 #include<string>
 using std::string;
 
-//#include "degree.h"
+#include "degree.h"
 #include "student.h"
 
 	// Get
@@ -14,7 +14,7 @@ using std::string;
 		return * numberOfDaysToCompleteCourse;
 	}
 	DegreeProgram getDegreeProgram() {
-		// definition in header file because out of scope for some reason   
+		// definition in header file because out of scope for some reason
 	}
 	// Set
 	void Student::setStudentID(string newStudentID) {

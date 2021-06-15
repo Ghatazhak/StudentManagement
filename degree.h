@@ -3,7 +3,7 @@
 
 
 // Enumeration of the degree program
-enum DegreeProgram {
+enum class DegreeProgram {
 	SECURITY,
 	NETWORK,
 	SOFTWARE,
