@@ -10,51 +10,51 @@ using std::endl;
 #include<string>
 using std::string;
 
+//#include<iomanip>
+
 #include "degree.h"
 
 // Student Class
 class Student {
+public:
+	const static int daystoCompleteArraySize = 3;
 private:
-	string studentID = "blank";
-	string firstName = "blank";
-	string lastName = "blank";
-	string emailAddress = "blank";
-	int age = 0;
-	int *numberOfDaysToCompleteCourse[3];
+	string studentID;
+	string firstName;
+	string lastName;
+	string emailAddress;
+	int age;
+	double daysToCompleteArray[daystoCompleteArraySize];
 	DegreeProgram degreeProgram;
 public:
-	//Constructor
-	Student(string initialStudentID, string initialFirstName, string initialLastName, string initialEmailAddress, int initialAge, int *initialNumberOfDaysToCompleteCourse[3], DegreeProgram initialDegreeProgram) {
-		studentID = initialStudentID;
-		firstName = initialFirstName;
-		lastName = initialLastName;
-		emailAddress = initialEmailAddress;
-		age = initialAge;
-		*numberOfDaysToCompleteCourse = *initialNumberOfDaysToCompleteCourse;
-	}
+	//Constructors
+	Student();
+	Student(string studentID, string firstName, string lastName, string emailAddress, int age, double daysToCompleteArray[], DegreeProgram degreeProgram);
+
+	~Student() {};
+
 	// Get
 	string getStudentID();
 	string getFirstName();
 	string getLastName();
 	string getEmailAddress();
 	int getAge();
-	int* getNumberOfDaysToCompleteCourse();
-	DegreeProgram getDegreeProgram() { return degreeProgram;}
+	double* getDaysToComplete();
+	DegreeProgram getDegreeProgram();
 
 	//Set
-	void setStudentID(string newStudentID);
-	void setFirstName(string newStudentFirstName);
+	void setStudentID(string newID);
+	void setFirstName(string newFirstName);
 	void setLastName(string newLastName);
 	void setEmailAddress(string newEmailAddress);
 	void setAge(int newAge);
-	void setNumberOfDaysToCompleteCourse(int *newNumberOfDaysToCompleteCourse[3]);
+	void setDaysToComplete(double newDaysToComplete[]);
 	void setDegreeProgram(DegreeProgram newDegreeProgram);
 	
-	// Print Member Function
-	void print() {
-		cout << studentID << endl;
-		return;
-	}
+	// output
+	void printHeading();
+	void printMemberVariables(); 
+
 };
 
 #endif
