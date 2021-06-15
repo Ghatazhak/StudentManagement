@@ -1,11 +1,18 @@
-#pragma once
+#ifndef DEGREE_H
+#define DEGREE_H
 
+#include<string>
+using std::string;
 
+// Array of Strings to convert int from enum to a string for output.
+static const string degreeProgramToString[] = { "SECURITY","NETWORK","SOFTWARE" };
 
 // Enumeration of the degree program
-enum class DegreeProgram {
+enum DegreeProgram {
 	SECURITY,
 	NETWORK,
 	SOFTWARE,
 };
+
+#endif
 

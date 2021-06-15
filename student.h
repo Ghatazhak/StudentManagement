@@ -1,4 +1,7 @@
-#pragma once
+#ifndef STUDENT_H
+#define STUDENT_H
+ 
+
 // Includes
 #include<iostream>
 using std::cout;
@@ -53,3 +56,5 @@ public:
 		return;
 	}
 };
+
+#endif
