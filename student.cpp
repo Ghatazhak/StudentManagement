@@ -63,11 +63,13 @@ void Student::setDegreeProgram(DegreeProgram newDegreeProgram) {
 	this->degreeProgram = newDegreeProgram;
 }
 
-void Student::printHeading() {
+void Student::printHeader() {
 	cout << "Output format: ID | First Name | Last Name | Email Address | Age | Days to Complete | Degree Program \n";
 }
 
-void Student::printMemberVariables() {
+
+
+void Student::printStudent() {
 
 	cout << this->getStudentID() << '\t';
 	cout << this->getFirstName() << '\t';

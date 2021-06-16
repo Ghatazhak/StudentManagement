@@ -50,7 +50,7 @@ void Roster::addStudent(string studentID, string firstName, string lastName, str
 
 
 void Roster::printAll() {
-	Student::printHeading();
+	Student::printHeader();
 
 	for (int i = 0; i <= Roster::rosterIndex; i++) {
 		cout << studentRosterArray[i]->getStudentID(); cout << '\t';
@@ -65,14 +65,14 @@ void Roster::printAll() {
 	}
 }
 
-	void Roster::printByDegreeType(DegreeProgram degreeProgram) {
-		
-		Student::printHeading();
+void Roster::printByDegreeType(DegreeProgram degreeProgram){
 
-		for (int i = 0; i <= Roster::rosterIndex; i++) {
-			if (Roster::studentRosterArray[i]->getDegreeProgram() == degreeProgram) studentRosterArray[i]->printMemberVariables();
-		}
-		cout << endl;
+	Student::printHeader();
+
+	for (int i = 0; i <= Roster::rosterIndex; i++) {
+		if (Roster::studentRosterArray[i]->getDegreeProgram() == degreeProgram) studentRosterArray[i]->printMemberVariables();
+	}
+	cout << endl;
 }
 
 	void Roster::printInvalidEmail() {

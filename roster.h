@@ -14,7 +14,7 @@ public:
 	void parseStudents(string studentData);
 	void addStudent(string studentID, string firstName, string lastName, string emailAddress, int age, double daysToCompleteOne, double daysToCompleteTwo, double daysToCompleteThree, DegreeProgram degreeProgram);
 	void printAll();
-	void printByDegreeType(DegreeProgram degreeProgram);
+	void printByDegreeType(DegreeProgram degreeProgram); 
 	void printInvalidEmail();
 	void printAverageDaysToComplete();
 	void removeByStudentID(string studentID);

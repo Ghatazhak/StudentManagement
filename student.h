@@ -50,10 +50,10 @@ public:
 	void setAge(int newAge);
 	void setDaysToComplete(double newDaysToComplete[]);
 	void setDegreeProgram(DegreeProgram newDegreeProgram);
-	
-	// output
-	void printHeading();
-	void printMemberVariables(); 
+
+
+	static void printHeader();
+	void printStudent();
 
 };
 
