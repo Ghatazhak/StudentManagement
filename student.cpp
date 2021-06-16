@@ -10,17 +10,17 @@ Student::Student() {
 	this->emailAddress = "";
 	this->age = 0;
 	for (int i = 0; i < daystoCompleteArraySize; i++) this->daysToCompleteArray[i] = 0;
-	this->degreeProgram = DegreeProgram::UNDECIDED;
+	this->degreeProgram = UNDECIDED;
 }
 
-Student::Student(string studentID, string firstName, string lastName, string emailAddress, int age, double daysToCompleteArray[], DegreeProgram degreeProgram) {
+Student::Student(string studentID, string firstName, string lastName, string emailAddress, int age, double daysToCompleteArray[], DegreeProgram degreetype) {
 	this->studentID = studentID;
 	this->firstName = firstName;
 	this->lastName = lastName;
 	this->emailAddress = emailAddress;
 	this->age = age;
 	for (int i = 0; i < daystoCompleteArraySize; i++) this->daysToCompleteArray[i] = daysToCompleteArray[i];
-	this->degreeProgram = degreeProgram;
+	this->degreeProgram = degreetype;
 }
 // Destructor
 Student::~Student() {}

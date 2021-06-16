@@ -33,18 +33,22 @@ void Roster::parseStudents(string studentData) {
 	Right = studentData.find(",", Left);
 	double daysToCompleteThree = stod(studentData.substr(Left, Right - Left));
 
-	DegreeProgram degreeProgram = UNDECIDED;
-	if (studentData.at(0) == 'S' && studentData.at(1) == 'E') degreeProgram = SECURITY;
-	if (studentData.at(0) == 'S' && studentData.at(1) == 'O') degreeProgram = SOFTWARE;
-	if (studentData.at(0) == 'N' && studentData.at(1) == 'E') degreeProgram = NETWORK;
+	DegreeProgram degreetype = UNDECIDED;
+	
+	Left = Right + 1;
+	Right = studentData.find(",", Left);
 
-	addStudent(studentID, lastName, firstName, emailAddress, age, daysToCompleteOne, daysToCompleteTwo, daysToCompleteThree, degreeProgram);
+	if (studentData.at(Left) == 'S' && studentData.at(Left + 1) == 'E') degreetype = SECURITY;
+	if (studentData.at(Left) == 'S' && studentData.at(Left + 1) == 'O') degreetype = SOFTWARE;
+	if (studentData.at(Left) == 'N' && studentData.at(Left + 1) == 'E') degreetype = NETWORK;
+
+	addStudent(studentID, lastName, firstName, emailAddress, age, daysToCompleteOne, daysToCompleteTwo, daysToCompleteThree, degreetype);
 }
 
-void Roster::addStudent(string studentID, string firstName, string lastName, string emailAddress, int age, double daysToCompleteOne, double daysToCompleteTwo, double daysToCompleteThree, DegreeProgram degreeProgram) {
+void Roster::addStudent(string studentID, string firstName, string lastName, string emailAddress, int age, double daysToCompleteOne, double daysToCompleteTwo, double daysToCompleteThree, DegreeProgram degreetype) {
 	double daysCompleteArr[3] = { daysToCompleteOne,daysToCompleteTwo, daysToCompleteThree };
 
-	studentRosterArray[++lastIndex] = new Student(studentID, firstName, lastName, emailAddress, age, daysCompleteArr, degreeProgram);
+	studentRosterArray[++lastIndex] = new Student(studentID, firstName, lastName, emailAddress, age, daysCompleteArr, degreetype);
 
 }
 

@@ -25,7 +25,7 @@ private:
 	string emailAddress;
 	int age;
 	double daysToCompleteArray[daystoCompleteArraySize];
-	DegreeProgram degreeProgram;
+	DegreeProgram degreeProgram = UNDECIDED;
 public:
 	//Constructors
 	Student();
