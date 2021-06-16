@@ -3,6 +3,7 @@
 
 #include<string>
 using std::string;
+using std::endl;
 
 // Array of Strings to convert int from enum to a string for output.
 static const string degreeProgramToString[] = { "SECURITY","NETWORK","SOFTWARE","UNDECIDED"};
