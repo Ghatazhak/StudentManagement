@@ -7,9 +7,9 @@
 using std::cout;
 using std::endl;
 
+
 #include<string>
 using std::string;
-
 //#include<iomanip>
 
 #include "degree.h"

@@ -6,7 +6,7 @@
 
 class Roster {
 private:
-	int rosterIndex = -1;
+	int lastIndex = -1;
 	const static int numStudents = 5;
 	Student* studentRosterArray[numStudents];
 
