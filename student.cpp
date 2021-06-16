@@ -68,15 +68,16 @@ void Student::printHeading() {
 }
 
 void Student::printMemberVariables() {
+
 	cout << this->getStudentID() << '\t';
 	cout << this->getFirstName() << '\t';
 	cout << this->getLastName() << '\t';
 	cout << this->getEmailAddress() << '\t';
 	cout << this->getAge() << '\t';
-	cout << degreeProgramToString
-
-
-
+	cout << this->getDaysToComplete()[0] << ',';
+	cout << this->getDaysToComplete()[1] << ',';
+	cout << this->getDaysToComplete()[2] << '\t';
+	cout << degreeProgramToString[this->getDegreeProgram()] << '\n';
 
 }
 
