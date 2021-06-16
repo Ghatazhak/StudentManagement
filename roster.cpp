@@ -119,6 +119,15 @@ void Roster::printByDegreeType(DegreeProgram degreeProgram){
 		else cout << studentID << " not found." << endl << endl;
 	}
 
+	Roster::~Roster() {
+		cout << "Destructor Called!" << endl << endl;
+		for (int i = 0; i < numStudents; i++) {
+			cout << "Destroying book #" << i + 1 << endl;
+			delete studentRosterArray[i];
+			studentRosterArray[i] = nullptr;
+		}
+}
+
 
 
 

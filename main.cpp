@@ -17,6 +17,37 @@ int main()
    "A5,Bart,Lyons,lyon29@wgu.edu,43,10,12,25,SOFTWARE"
 	};
 
+	const int numStudents = 5;
+
+	Roster roster;
+	for (int i = 0; i < numStudents; i++) roster.parseStudents(studentData[i]);
+	cout << "Displaying all Students: " << endl;
+	roster.printAll();
+	cout << endl;
+
+	for (int i = 0; i < 3; i++) {
+
+		cout << "Displaying by Student Degree: " << degreeProgramToString[i] << endl;
+		roster.printByDegreeType((DegreeProgram)i);
+	}
+
+	cout << "Displaying student with invalid Emails" << endl;
+	roster.printInvalidEmail();
+	cout << endl;
+
+	cout << "Displaying Average days to complete three courses: " << endl;
+	roster.printAverageDaysToComplete();
+
+	cout << "Removing student by with ID A5:" << endl;
+	roster.removeByStudentID("A5");
+	cout << endl;
+
+	cout << "Removing student by with ID A5:" << endl;
+	roster.removeByStudentID("A5");
+	cout << endl;
+
+	system("pause");
+	return 0;
 
 
 }

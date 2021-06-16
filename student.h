@@ -31,7 +31,7 @@ public:
 	Student();
 	Student(string studentID, string firstName, string lastName, string emailAddress, int age, double daysToCompleteArray[], DegreeProgram degreeProgram);
 
-	~Student() {};
+	~Student();
 
 	// Get
 	string getStudentID();
