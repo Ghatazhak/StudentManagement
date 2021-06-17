@@ -86,17 +86,11 @@ void Roster::printByDegreeType(DegreeProgram degreeProgram){
 			
 			string email = (studentRosterArray[i]->getEmailAddress());
 			
-
-		
-				//check if @ is greater than the beginning of the string and less than the end if returned
-				bool checkForAt = (email.find('@') > 0 && email.find('@') < email.length()) ? true : false;
-				//check if . is greater than the beginning of the string and less than the end if returned
-				bool checkForPeriod = (email.find('.') > 0 && email.find('.') < email.length()) ? true : false;
-				//check if ' ' is greater than the beginning of the string and less than the end if returned
-				bool checkForSpace = (email.find(' ') > 0 && email.find(' ') < email.length()) ? true : false;
-				//if @ is true, . is true, and ' ' is not true, it is a good email
-
-				bool emailisValid = (checkForAt && checkForPeriod && !checkForSpace ? true : false);
+			bool checkForAt = (email.find('@') > 0 && email.find('@') < email.length()) ? true : false;
+			bool checkForPeriod = (email.find('.') > 0 && email.find('.') < email.length()) ? true : false;
+			bool checkForSpace = (email.find(' ') > 0 && email.find(' ') < email.length()) ? true : false;
+				
+			bool emailisValid = (checkForAt && checkForPeriod && !checkForSpace ? true : false);
 
 				if (!emailisValid) {
 					InvalidEmails = true;
@@ -106,9 +100,6 @@ void Roster::printByDegreeType(DegreeProgram degreeProgram){
 		if (!InvalidEmails) cout << "NONE" << endl;
 	}
 			
-
-			
-
 	void Roster::printAverageDaysToComplete() {
 
 		for (int i = 0; i <= Roster::lastIndex; i++) {
