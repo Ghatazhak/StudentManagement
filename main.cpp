@@ -17,6 +17,8 @@ int main()
    "A5,Bart,Lyons,lyon29@wgu.edu,43,10,12,25,SOFTWARE"
 	};
 
+	cout << "Scripting and Programming - Applications – C867 using C++ by: #005663416 Bart Lyons" << endl << endl;
+
 	const int numStudents = 5;
 
 	Roster roster;
