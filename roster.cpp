@@ -93,13 +93,15 @@ void Roster::printByDegreeType(DegreeProgram degreeProgram){
 		if (!InvalidEmails) cout << "NONE" << endl;
 	}
 			
-	void Roster::printAverageDaysToComplete() {
-
-		for (int i = 0; i <= Roster::lastIndex; i++) {
-			cout << studentRosterArray[i]->getStudentID() << ": ";
-			cout << (studentRosterArray[i]->getDaysToComplete()[0] + studentRosterArray[i]->getDaysToComplete()[1] + studentRosterArray[i]->getDaysToComplete()[2]) / 3.0 << endl;
+	void Roster::printAverageDaysInCourse(string studentID) {
+		for (int i = 0; i < 5; i++) {
+			if (studentRosterArray[i]->getStudentID() == studentID) {
+				double AverageOfDays = 0;
+				AverageOfDays = (studentRosterArray[i]->getDaysToComplete()[0] + studentRosterArray[i]->getDaysToComplete()[1] + studentRosterArray[i]->getDaysToComplete()[2]) / 3.0;
+				cout << "Student ID: " << studentID << ": " << AverageOfDays;
+			}
 		}
-		cout << endl;
+		cout << endl << endl;
 	}
 
 	void Roster::removeByStudentID(string studentID) {

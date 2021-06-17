@@ -16,7 +16,7 @@ public:
 	void printAll();
 	void printByDegreeType(DegreeProgram degreeProgram); 
 	void printInvalidEmail();
-	void printAverageDaysToComplete();
+	void printAverageDaysInCourse(string studentID);
 	void removeByStudentID(string studentID);
 	~Roster();
 

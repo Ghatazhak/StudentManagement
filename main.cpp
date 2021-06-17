@@ -38,7 +38,11 @@ int main()
 	cout << endl;
 
 	cout << "Displaying Average days to complete three courses: " << endl;
-	roster.printAverageDaysToComplete();
+	roster.printAverageDaysInCourse("A1");
+	roster.printAverageDaysInCourse("A2");
+	roster.printAverageDaysInCourse("A3");
+	roster.printAverageDaysInCourse("A4");
+	roster.printAverageDaysInCourse("A5");
 
 	cout << "Removing student by with ID A5:" << endl;
 	roster.removeByStudentID("A5");
